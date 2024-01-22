@@ -131,3 +131,13 @@ btnUp.onclick= function (){
     top:0,
   });
 };
+
+//loding 
+window.addEventListener('load', () => {
+  const loader= document.querySelector(".loading")
+  loader.classList.add("loading__hidden")
+
+  loader.addEventListener("transitionend" , () =>{
+    document.body.removeChild("loader")
+  })
+})
