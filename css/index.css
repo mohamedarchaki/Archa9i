@@ -63,6 +63,7 @@ body::-webkit-scrollbar-track{
     justify-content: center;
     transition: opacity .4s,visibility .4s;
 }
+
 .loading__hidden{
     opacity: 0;
     visibility: hidden;
@@ -314,7 +315,7 @@ span{
 }
 @media(max-width:991px){
     .home {
-        height: fit-content;
+        height: 100vh;
     }
 }
 .home .container{
@@ -327,8 +328,9 @@ span{
 }
 @media(max-width:991px){
     .home .container {
-        height: fit-content;
         grid-template-columns: auto;
+        justify-content: start;
+    align-items: start;
     }
 }
 
@@ -337,21 +339,32 @@ span{
 }
 @media(max-width:767px){
     .home .text {
-    margin-left: 25px; 
+    margin: 10px 0 5px;
         width: fit-content;
-        text-align: center;
     }
 }
-.home .text h3{
-font-size: 30px;
-color: var(--main-color-2);
-}
+
 .home .text h1{
     font-weight: bold;
     font-size: 55px;
     color: var(--main-color-2);
 }
-
+@media(max-width:767px) {
+    .home .text h1{
+        font-size: 30px;
+        margin: 5px 0;
+        }
+}
+.home .text h3{
+font-size: 30px;
+color: var(--main-color-2);
+}
+@media(max-width:767px) {
+    .home .text h3{
+        font-size: 20px;
+        margin: 5px 0;
+        }
+}
 .home .text p{
     font-size: 24px;
     width: fit-content;
@@ -362,13 +375,14 @@ color: var(--main-color-2);
 }
 @media(max-width:767px) {
     .home .text p {
-        font-size: 24px;
+        font-size:18px;
         width: fit-content;
         letter-spacing: 1px;
-        line-height: 1.5;
-        text-indent: 50px;
+        line-height: 1.4;
+        text-indent: 10px;
         text-align: left;
-        padding: 14px;
+        padding: 5px;
+        margin: 0;
     }
     
 }
@@ -386,7 +400,13 @@ color: var(--main-color-2);
     background-position: right bottom;
     width: fit-content;
 }
-
+@media(max-width:767px) {
+    .home button {
+        margin: 5px auto;
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+}
 .home button:hover {   
     background-position: left bottom;
     color: white;
@@ -417,13 +437,18 @@ color: var(--main-color-2);
 }
 @media(max-width:991px){
     .home .img{
-        display: none;
+        bottom: 10px;
     }
 }
 .home .img img{
     width: 500px;
     padding: 50px ;
-
+}
+@media(max-width:991px){
+    .home .img img{
+        width: 300px;
+    padding: 30px ;
+    }
 }
 
 /* end home */
