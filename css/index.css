@@ -126,7 +126,7 @@ span{
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 101;
     transition: var(--main-transition);
     cursor: pointer;
 }
@@ -466,108 +466,43 @@ color: var(--main-color-2);
 .skills{
     padding: var(--padding-top-bottem);
     background-color: var(--section-background-2);
-    text-align: center;
 }
 .skills .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-    grid-gap: 20px;
-    padding: 20px 0;
-}
-.skills .box{
-    position: relative;
-    background-color: var(--section-background);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: var(--shadow);
-    padding: 20px;
-    border-radius: 3px;
-    transition: var(--main-transition);
-    margin: 18px;
+    align-items: center;
+    
 }
-.skills .box:hover{
-    transform: translateY(-10px);
+@media(max-width:621px){
+    .skills .container{
+        flex-direction: column ;
 }
-.skills .box::after{
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 3px;
-top: 0;
-left: 0;
-transition: var(--main-transition);
 }
-.skills .box::before{
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 3px;
-    bottom: 0;
-    right: 0; 
-    transition: var(--main-transition);
+.skills .container .box:not(:first-child){
+    display: flex;
+    flex-wrap: wrap;
 }
-.skills .box.box-html:hover::after{
-    width: 100%;
-    background-color: #ffad29;
-}
-.skills .box.box-html:hover::before{
-    width: 100%;
-    background-color: #ffad29;
-}
-
-.skills .box.box-css:hover::after{
-    width: 100%;
-    background-color: #3b45ac;
-}
-.skills .box.box-css:hover::before{
-    width: 100%;
-    background-color: #3b45ac;
-}
-
-.skills .box.box-js:hover::after{
-    width: 100%;
-    background-color: #f7e812;
-}
-.skills .box.box-js:hover::before{
-    width: 100%;
-    background-color: #f7e812;
-}
-.skills .box.box-git:hover::after{
-    width: 100%;
-    background-color: var(--main-color-2);
-}
-.skills .box.box-git:hover::before{
-    width: 100%;
-    background-color: var(--main-color-2);
-}
-.skills .box i{
-    font-size: 150px;
-    margin: auto;
-    color: var(--main-color-2);
-    transition: var(--main-transition);
-}
-.skills .box:hover i.fa-html5{
-    color:#ffad29;
-}
-.skills .box:hover i.fa-css3-alt{
-    color: #3b45ac;
-}
-.skills .box:hover i.fa-js{
-    color: #f7e812;
-}
-.skills .box .text{
-    text-align: left;
-}
-.skills .text h2{
-    color: var(--main-color-2);
+.skills .container .box h2{
+    font-size: 25px;
+    color: var(--main-color-1);
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
-.skills .text p{
+
+.skills .container .box p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    max-width: 50%;
     color: var(--color-p);
-    letter-spacing: 1px;
-    line-height: 1.5;
+    line-height: 1.4;
+}
+@media(max-width:621px){
+    .skills .container .box p{
+        max-width: fit-content;
+}
+}
+.skills .container .box i{  
+    font-size: 55px;
+    margin: 10px 20px;
+    color: var(--main-color-1);
 }
 /* end services */
 
@@ -829,19 +764,63 @@ text-align: center;
 background-color: var(--section-background);
 }
 .project .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-    grid-gap: 50px 20px;
+    position: relative;
+}
+.btn-left,
+.btn-right{
+    position: absolute;
+    width: 30px;
+    transform: translateY(-50%);
+    z-index: 30;
+    top: 50%;
+    height: 30px;
+    background: var(--section-background-2);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 15px;
+    color: var(--main-color-1);
+}
+.btn-left{
+    left: 0;
+}
+.btn-right{
+    right: 0;
+}
+
+.scrollUse{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.project .scrollUse::-webkit-scrollbar{
+    display: none;
+}
+.project .list-box{
+    display: flex;
+    padding: 10px 0 20px; 
+    
 }
 .project .container .box{
     background-color: var(--section-background-2);
     border-radius: 3px;
+    margin: 5px 10px;
+    width: 350px;
+    min-width: 350px;
     counter-increment: services;
     box-shadow: var(--shadow-2);
     transition: var(--main-transition);
 }
 .project .container .box:hover{
     transform: translateY(-10px);
+}
+@media(max-width:534px){
+    .project .container .box{
+    width: 300px;
+    min-width: 300px;
+    }
 }
 .project .box .img{
     position: relative;

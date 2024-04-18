@@ -174,3 +174,19 @@ function getInStorge(){
   let testBody = localStorage.getItem("body") || "body"; 
 bodyDark.classList.add(testBody);
 }
+
+
+function setupScrolling(box, btnLeft, btnRight) {
+  box.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+      box.scrollLeft += evt.deltaY;
+  });
+  btnLeft.addEventListener("click", () => {
+      box.scrollLeft -= (window.innerWidth >767) ? 360 : 320;
+  });
+
+  btnRight.addEventListener("click", () => {
+      box.scrollLeft += (window.innerWidth >767) ? 360 : 320;
+  });
+}
+setupScrolling(document.querySelector('.scrollUse'),document.querySelector('.btn-left'),document.querySelector('.btn-right'))
