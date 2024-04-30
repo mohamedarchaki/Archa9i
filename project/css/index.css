@@ -315,6 +315,13 @@ text-align: center;
 background-color: var(--section-background);
 height: calc(100vh  - 75px);
 }
+@media(max-width:534px){
+    .project{
+        padding:0;
+        padding-bottom: 30px;
+        height: fit-content;
+        }
+}
 .project .container{
     position: relative;
 }
@@ -345,7 +352,8 @@ height: calc(100vh  - 75px);
         padding: 0 5px ;
         }
     .project .container .box{
-    width: 48%;
+    
+    width: 83%;
     min-width: 48%;
     }
 }
@@ -367,7 +375,11 @@ height: calc(100vh  - 75px);
     padding: 3px 5px;
     font-size: 20px;
 }
-
+@media(max-width:491px){
+    .project .box .img i{
+        font-size: 15px;
+    }
+}
 
 /* end  project */
 
