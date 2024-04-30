@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="google-adsense-account" content="ca-pub-9727784475685062">
+   <title>Archa9i</title>
+
+   <link rel="icon" sizes="30x30" href="img/mohamed archaki.ico">
+
+   <!-- link css  -->
+   <link rel="stylesheet" href="css/all.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/normlziecss.css">
+   <!-- end css -->
+
+   <!-- java script  -->
+
+   <!-- end java script  -->
+   <!-- link font familly -->
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&amp;display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!-- end font  -->
+</head>
+<body class="">
+   <div class="loading" >
+      <div class="load"></div>
+      </div>
+   </div>
+
+   <div class="btnUp" id="Btnup">
+   <i class="fas fa-chevron-right"></i>
+</div>
+   <!-- start header  -->
+   <div class="header" id="head">
+      <div class="container">
+         <img src="img/logo archa9i.png" alt="ARCHA9I" id="logo1">
+         <ul id="actoins" class="active">
+         <img src="img/logo archa9i.png" alt="ARCHA9I" id="logo">
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="../project/index.html" >Project</a></li>
+            <li><a href="../skills/index.html" >Skills</a></li>
+            <li><a href="" >contacte</a></li>
+            <li><a href="../about/index.html" >About</a></li>
+         </ul>
+         <div class="span" id="menu">
+            <span id="a"></span>
+            <span id="b"></span>
+            <span id="c"></span>
+         </div>
+         <i class="fa-solid fa-moon" id="icon"></i>
+      </div>
+   </div>
+   <!-- end header  -->
+
+   <!-- start contacte  -->
+<div class="contacte" id="contacte">
+   <div class="container">
+
+      <div class="text">
+         <h1>Contacte Me.</h1>
+         <p>I always strive to deliver innovative and high-quality projects. Whether you need to enhance user experience, create a new website, or add aesthetic touches,</p>
+         <p>I'm here to help. Let's work together to bring your vision to life on the web. Contact me today to embark on creating a fantastic digital interface!</p>
+         <div class="social">
+            <svg width="53"  height="68" viewBox="0 0 53 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.00001 0.999988C6.91304 1.98551 26.6061 10.9359 27.0417 20.0833C27.223 23.8896 25.316 29.2172 22.1667 31.6666C15.4036 36.9267 4.17815 29.9088 13.5 23.5C18.7279 19.9058 26.1975 22.8211 31.4583 24.9583C38.5 28.5 38.5 28.5 43.3334 35.25C49 44.5 48.6119 57.8059 47.5 57.25" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+            <path d="M49.75 64C48.6261 63.3881 40.1729 58.4261 41.125 59.1666C42.3712 60.136 43.7571 61.0071 44.875 62.125C46.1976 63.4476 47.8331 64.4164 49 65.875C50.0239 67.1549 52 58.7612 52 57.25" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div>
+            <a href="https://web.facebook.com/moha.torsit.9" target="_blank">
+               <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/_archa9i_/" target="_blank">
+               <i class="fab fa-instagram" style="font-weight: bold;" ></i>
+            </a>
+            <a href="http://wa.me/+212689431780" target="_blank" >
+               <i class="fab fa-whatsapp" style="font-weight: bold;"></i>
+            </a>
+            <a href="mailto:archakimohamed137@gmail.com" target="_blank">
+               <i class="fab fa-google"></i>
+            </a>
+         </div>
+         </div>
+
+
+      </div>
+      
+      <form action="https://formspree.io/f/meqbbrzp" method="POST"  class="box">
+         <h3>Send me a Message</h3>
+
+         <div class="name">
+
+            <label for="text">
+         <input type="text" name="Full Name" placeholder="Full Name" id="contact-name" onkeydown="validateName()" >
+         <span id="name-error"></span>
+      </label>
+
+         <label for="email">
+         <input type="email" name="email" placeholder="You Email" id="contact-email" onkeydown="validateEmail()">
+         <span id="email-error"></span>
+      </label>
+
+      </div>
+      <label for="text">
+      <input type="text" name="Sujete" placeholder="Sujete" id="contact-sujete" onkeydown="validateSujete()">
+      <span id="sujete-error"></span>
+   </label>
+
+   <label for="message" class="textarea">
+      <textarea name="message" placeholder="Message" id="contact-message" onkeydown="validateMessage()" ></textarea>
+      <span id="message-error"></span>
+   </label>
+
+   <label for="button">
+      <button  onclick="return validateForme()"><i class="fa-solid fa-paper-plane"></i><p> Send Message </p></button>
+      <span id="subm-error"></span>
+   </label>
+   </div>
+   </form>
+   </div>
+   <!-- end contacte  -->
+    <!-- start menu mobile -->
+    <div class="menu-phon">
+      <ul class="nav_links">
+         <li class="nav_link">
+            <a href="../index.html">
+               <i class="fa-solid fa-house"></i>
+         </a>
+         </li>
+         <li class="nav_link">
+            <a href="../skills/index.html">
+               <i class="fa-solid fa-laptop-code"></i>
+            </a>
+         </li>
+         <li class="nav_link">
+            <a href="../project/index.html">
+               <i class="fa-solid fa-laptop-file"></i>
+            </a>
+         </li>
+         <li class="nav_link  active">
+            <a href="">
+               <i class="fa-solid fa-envelope"></i>
+            </a>
+         </li>
+         <li class="nav_link">
+            <a href="../about/index.html">
+               <i class="fa-solid fa-address-card"></i>
+            </a>
+         </li>
+
+      </ul>
+   </div>
+   <!-- end  menu mobile -->
+   
+   <script src="javaScript/script.js"></script>
+</body>
+</html>

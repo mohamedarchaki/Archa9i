@@ -130,7 +130,24 @@ function validateForme(){
         return false;
     }
 }
+// =========== btn scroltop==========
+let btnUp = document.querySelector(".btnUp");
 
+window.onscroll = function () {
+  if(window.scrollY > 600){
+    btnUp.style.display="flex"
+  }
+  else{
+    btnUp.style.display="none"
+  }
+};
+
+btnUp.onclick= function (){
+  window.scrollTo({
+    left:0,
+    top:0,
+  });
+};
 
 //loding 
 window.addEventListener('load', () => {
@@ -155,7 +172,6 @@ function getInStorge(){
   let testLogo = localStorage.getItem("logo")
   logo.src=testLogo || "img/logo archa9i.png"
   logo1.src=testLogo || "img/logo archa9i.png"
-  logo2.src=testLogo || "img/logo archa9i.png"
   let testBody = localStorage.getItem("body") || "body"; 
 bodyDark.classList.add(testBody);
 }
