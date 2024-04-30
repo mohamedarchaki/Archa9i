@@ -314,6 +314,11 @@ span{
 .skills{
     padding-top: 10px;
 }
+@media(max-width:621px){
+    .skills{
+        padding-bottom: 20px;
+    }
+}
 .skills .container{
     display: flex;
     align-items: center;

@@ -313,6 +313,12 @@ span{
     background-color: var(--section-background-2);
     height: calc(100vh - 75px);
 }
+@media(max-width:767px){
+    .about{
+        padding-bottom: 20px;
+        height: fit-content;
+    }
+}
 .about .container h1{
     color: var(--main-color);
     display: block;

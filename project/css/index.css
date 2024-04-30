@@ -335,7 +335,7 @@ height: calc(100vh  - 75px);
 }
 .project .container .box{
     background-color: var(--section-background-2);
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 10px 2px;
     width: 350px;
     min-width: 350px;
@@ -364,7 +364,7 @@ height: calc(100vh  - 75px);
 }
 .project .box .img img{
     max-width: 100%;
-    border-radius: 3px 3px 0 0;
+    border-radius: 5px;
 }
 .project .box .img i{
     position: absolute;
