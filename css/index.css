@@ -935,12 +935,11 @@ color: var(--main-color);
 .menu-phon{
     display: block;
     position: fixed;
-    bottom: 3px;
+    bottom: 0px;
     background: var(--main-color-2);
-    width: 90%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 10px;
     text-align: center;
     padding: 7px 10px;
 
@@ -952,7 +951,7 @@ color: var(--main-color);
 }
 .menu-phon .nav_links .nav_link a{
     color: var(--section-background-2);
-    font-size: 20px;
+    font-size: 22px;
 }
 .menu-phon .nav_links  .active a{
     color: var(--main-color);

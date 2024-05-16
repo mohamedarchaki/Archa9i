@@ -308,93 +308,176 @@ span{
 
 /* end header */
 
-
-
-/* start services */
-.skills{
-    padding-top: 10px;
+/* start About  */
+.review{
+    position: relative;
+    height: calc(100vh - 75px);
 }
-@media(max-width:621px){
-    .skills{
-        padding-bottom: 20px;
+@media(max-width:767px){
+    .review{
+        height: fit-content;
+        padding-bottom: 30px;
     }
 }
-.skills .container{
+.review .container{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    
+    height: 100%;
 }
-@media(max-width:621px){
-    .skills .container{
-        flex-direction: column ;
+.review .container .box-form{
+    width: 50%;
 }
+@media(max-width:767px){
+    .review .container .box-form{
+        width: 100%;
+    }
 }
-.skills .container .box{
-        display: flex;
-    flex-wrap: wrap;
-}
-.box-skill {
-    display: flex;
-    width: 200px;
-    height: 100px;
-    background-color:rgb(23, 26, 28);
-    align-items: center;
-    border-radius: 5px;
-    margin: 10px;
-}
-@media(max-width:621px){
-    .skills .container .box{
-        display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-    .box-skill {
-        width: 130px;
-    align-items: center;
-    justify-content: center;
-}
-}
-.darck-mode .box-skill{ 
-    background-color: var(--main-color-1);
- }
-.skills .container .text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.skills .container .box h2{
-    font-size: 25px;
-    color: var(--main-color-1);
+.review .container .box-form input ,
+.review .container .box-form textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid var(--color-p);
+    height: 46px;
+    padding: 10px  30px 10px 10px ;
+    border-radius: 2px;
+    font-size: 18px;
     letter-spacing: 1px;
+    color: var(--main-color-2);
+    width: 100%;
+}
+.review .container .box-form .name-email{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+@media(max-width:767px){
+    .review .container .box-form .name-email{
+        flex-direction: column;
+    }
+}
+.review .container label{
+    width: 49%;
+}
+@media(max-width:767px){
+    .review .container label{
+        width: 100%;
+    }
+}
+.review .container .box-form .name-email input:last-child{
+    margin-right: 0;
+}
+.review .container .box-form textarea{
+    height: 180px;
+    resize: none;
+    padding: 10px 15px;
+}
+.review .container .box-form input:focus,textarea:focus{
+    outline: none;
+}
+.review .container .box-form input::placeholder,textarea::placeholder{
+    transition: var(--main-transition) opacity;
+}
+.review .container .box-form input:focus::placeholder,textarea:focus::placeholder{
+    opacity: 0;
+}
+
+.review .container .star{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+.review .container .star i{
+    margin: 5px;
+    font-size: 18px;
+    color: var(--color-p);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* تأثير تغيير الحجم */
+}
+.review .container .box-form  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--main-color);
+    border: none;
+padding: 5px 10px;
+    border-radius: 2px;
     margin: 10px 5px;
 }
-
-.skills .container .box p{
-    font-size: 20px;
-    letter-spacing: 1px;
-    max-width: 70%;
-    color: var(--color-p);
+.review .container .box-form button p{
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 2px;
+    color: var(--section-background);
+    margin: 0;
+}
+.review .container .box_ppl{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.review .container .box_ppl .box{
+    position: relative;
+    margin: 5px;
+    width: 260px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--section-background);
+}
+.review .container .box_ppl .box h1{
+    margin: 5px;
+    font-size: 24px;
+    color: var(--main-color-1);
+}
+.review .container .box_ppl .box p{
+    margin: 5px 5px 10px;
+    font-size: 18px;
     line-height: 1.4;
-    margin: 0 0 5px;
+    color: var(--color-p);
+
 }
-@media(max-width:621px){
-    .skills .container .box p{
-        max-width: fit-content;
+.review .container .box_ppl .box img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    border: 5px solid var(--section-background-2);
 }
+.review .container .box_ppl .stars{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 
-.skills .container .box i{  
-    font-size: 55px;
-    color: var(--section-background-2);
-    margin: 10px 20px;
-} 
-.darck-mode .skills.skills .container .box i{ 
-    color: rgb(23, 26, 28);
- }
-/* end services */
+.review .container label{
+
+    position: relative;
+}
+.review .container span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    font-size: 14px;
+    color: #df0024;
+    
+}
+.review .container  .textarea span{
+    right: 5px;
+    bottom: 10px;
+    top: auto;
+}
+.review .container span i{
+    color: seagreen;
+    font-size: 17px;
+}
+/* end About  */
 
 .menu-phon{
     display: none;

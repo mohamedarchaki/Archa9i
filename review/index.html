@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="google-adsense-account" content="ca-pub-9727784475685062">
+   <title>Archa9i</title>
+
+   <link rel="icon" sizes="30x30" href="img/mohamed archaki.ico">
+
+   <!-- link css  -->
+   <link rel="stylesheet" href="css/all.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/normlziecss.css">
+   <!-- end css -->
+
+   <!-- java script  -->
+
+   <!-- end java script  -->
+   <!-- link font familly -->
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&amp;display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!-- end font  -->
+</head>
+<body class="">
+   <div class="loading" >
+      <div class="load"></div>
+      </div>
+   </div>
+   <div class="btnUp" id="Btnup">
+   <i class="fas fa-chevron-right"></i>
+   </div>
+   <!-- start header  -->
+   <div class="header" id="head">
+      <div class="container">
+         <img src="img/logo archa9i.png" alt="ARCHA9I" id="logo1">
+         <ul id="actoins" class="active">
+         <img src="img/logo archa9i.png" alt="ARCHA9I" id="logo">
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="../project/index.html" >Project</a></li>
+            <li><a href="../skills/index.html" >Skills</a></li>
+            <li><a href="../contact/index.html" >contacte</a></li>
+            <li><a href="" >About</a></li>
+         </ul>
+         <div class="span" id="menu">
+            <span id="a"></span>
+            <span id="b"></span>
+            <span id="c"></span>
+         </div>
+         <i class="fa-solid fa-moon" id="icon"></i>
+      </div>
+   </div>
+   <!-- end header  -->
+   <!-- start  review  -->
+      <div class="review">
+         <div class="container">
+            <div class="box-form">
+               <div class="name-email">
+               <label for="text">
+                  <input type="text" placeholder="Name" id="contact-name" onkeydown="validateName()">
+                  <span id="name-error"></span>
+               </label>
+               <label for="text">
+                  <input type="text" placeholder="Email" id="contact-email" onkeydown="validateEmail()">
+                  <span id="email-error"></span>
+               </label>
+                  
+               </div>
+               <label for="text">
+                  <input type="text" name="Sujete" placeholder="Revirw Title" id="contact-sujete" onkeydown="validateSujete()">
+                  <span id="sujete-error"></span>
+               </label>
+               <div class="star">
+                  <i class="fa-solid fa-star sta" onclick="changeColor(1)"></i>
+                  <i class="fa-solid fa-star sta" onclick="changeColor(2)"></i>
+                  <i class="fa-solid fa-star sta" onclick="changeColor(3)"></i>
+                  <i class="fa-solid fa-star sta" onclick="changeColor(4)"></i>
+                  <i class="fa-solid fa-star sta" onclick="changeColor(5)"></i>
+               </div>
+               <label for="message" class="textarea">
+                  <textarea name="message" placeholder="Writ Freedback" id="contact-message" onkeydown="validateMessage()" ></textarea>
+                  <span id="message-error"></span>
+               </label>
+               <label for="button">
+                  <button id="addRev" onclick="return validateForme()"></i><p> Send Review </p></button>
+               </label>
+               
+            </div>
+
+            <div class="box_ppl">
+               <div class="box">
+                  <h1>Name</h1>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                  <div class="stars">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                  </div>
+                  <img src="img/avatar-05.png" alt="">
+               </div>
+               <div class="box">
+                  <h1>Name</h1>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                  <div class="stars">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                  </div>
+                  <img src="img/avatar-05.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   <!-- end review  -->
+   <!-- start menu mobile -->
+   <div class="menu-phon">
+      <ul class="nav_links">
+         <li class="nav_link">
+            <a href="../index.html">
+               <i class="fa-solid fa-house"></i>
+         </a>
+         </li>
+         <li class="nav_link">
+            <a href="../skills/index.html">
+               <i class="fa-solid fa-laptop-code"></i>
+            </a>
+         </li>
+         <li class="nav_link">
+            <a href="../project/index.html">
+               <i class="fa-solid fa-laptop-file"></i>
+            </a>
+         </li>
+         <li class="nav_link">
+            <a href="../contact/index.html">
+               <i class="fa-solid fa-envelope"></i>
+            </a>
+         </li>
+         <li class="nav_link  ">
+            <a href="../about/index.html">
+               <i class="fa-solid fa-address-card"></i>
+            </a>
+         </li>
+
+      </ul>
+   </div>
+   <!-- end  menu mobile -->
+   
+   <script src="javaScript/script.js"></script>
+</body>
+</html>
