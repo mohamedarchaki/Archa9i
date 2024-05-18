@@ -503,7 +503,7 @@ color: var(--main-color);
     padding: 10px 15px;
     border-radius: 2px; 
     letter-spacing: 1px;
-    color: var(--section-background);
+    color: var(--main-color-2);
 }
 .contacte .box input:focus,textarea:focus{
     outline: none;

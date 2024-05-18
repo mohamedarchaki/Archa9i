@@ -184,4 +184,35 @@ btnRv.onclick=function (){
 }
 }
 
+//==========JSON REVIEW=================
 
+  const reviews = [
+    { 'id': 1, 'name': 'John Doe', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 4 },
+    { 'id': 2, 'name': 'Jane Smith', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 3 },
+    { 'id': 3, 'name': 'Alice Johnson', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 5 },
+    { 'id': 4, 'name': 'Bob Brown', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 2 }
+  ];
+
+  function afficherReview() {
+    const boxPpl = document.querySelector('.box_ppl');
+    if (!boxPpl) return;
+
+    reviews.forEach(review => {
+      boxPpl.insertAdjacentHTML('beforeend', `
+        <div class="box">
+          <h1>${review.name}</h1>
+          <p>${review.freedback}</p>
+          <div class="stars">
+            ${[...Array(5)].map((_, i) => `<i class="fa-solid fa-star ${i < review.rvPnt ? 'gold' : ''}"></i>`).join('')}
+          </div>
+          <img src="img/avatar-05.png" alt="">
+        </div>
+      `);
+    });
+
+    document.querySelectorAll('.gold').forEach(star => {
+      star.style.color = 'gold';
+    });
+  }
+
+  afficherReview();
