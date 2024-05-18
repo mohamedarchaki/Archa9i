@@ -565,6 +565,7 @@ padding: 5px 10px;
 }
 @media(max-width:491px){
 .menu-phon{
+    z-index: 5;
     display: block;
     position: fixed;
     bottom: 0px;
