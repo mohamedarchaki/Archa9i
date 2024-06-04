@@ -414,4 +414,9 @@ height: calc(100vh  - 75px);
 .header .span{
     display: none;
 }
+.fa-star-half-stroke{
+    position: absolute;
+    top: 28px;
+    right: 40px;
+}
 }

@@ -592,4 +592,9 @@ padding: 5px 10px;
 .header .span{
     display: none;
 }
+.fa-star-half-stroke{
+    position: absolute;
+    top: 28px;
+    right: 40px;
+}
 }

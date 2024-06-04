@@ -324,6 +324,11 @@ span{
     align-items: center;
     height: 100%;
 }
+@media(max-width:767px){
+    .review .container {
+        flex-direction: column;
+    }
+}
 .review .container .box-form{
     width: 50%;
 }
@@ -411,22 +416,66 @@ padding: 5px 10px;
     color: var(--section-background);
     margin: 0;
 }
-.review .container .box_ppl{
+.review .container .box_ppl {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
     width: 50%;
-}
-.review .container .box_ppl .box{
     position: relative;
+    
+    min-height: 250px;
+}
+
+.review .container .box_ppl .box {
+    position: absolute;
     margin: 5px;
-    width: 260px;
-    height: 150px;
+    width: 80%;
+    height: 200px;
     padding: 5px;
+    text-align: center;
     border-radius: 5px;
     background-color: var(--section-background);
+    display: none;
+    transition: .4s;
+}
+@media(max-width:767px){
+    .review .container .box_ppl {
+        width: 100%;
+    }
+}
+.review .container .box_ppl .box.active {
+    display: block;
+}
+#leftBtn{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 10px;
+    background-color: transparent;
+    border: 0;
+    color: var(--main-color-1);
+    font-size: 12px;
+    z-index: 5;
+}
+@media(max-width:767px){
+    #leftBtn{
+        left: 0px;
+    }
+}
+#rightBtn{
+    position: absolute;
+    transform: rotate(-90deg);
+    right: 10px;
+    background-color: transparent;
+    border: 0;
+    color: var(--main-color-1);
+    font-size: 12px;
+    z-index: 5;
+}
+@media(max-width:767px){
+    #rightBtn{
+        right: 0px;
+    }
 }
 .review .container .box_ppl .box h1{
     margin: 5px;
@@ -434,24 +483,25 @@ padding: 5px 10px;
     color: var(--main-color-1);
 }
 .review .container .box_ppl .box p{
-    margin: 5px 5px 10px;
+    display: block;
+    margin: 5px 5px 15px;
     font-size: 18px;
     line-height: 1.4;
     color: var(--color-p);
 
+
 }
 .review .container .box_ppl .box img{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+    display: block;
     border-radius: 50px;
-    position: absolute;
-    top: -10px;
-    right: -5px;
+    margin: 0 auto;
     border: 5px solid var(--section-background-2);
 }
 .review .container .box_ppl .stars{
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: 10px;
 }
 
@@ -476,6 +526,14 @@ padding: 5px 10px;
 .review .container span i{
     color: seagreen;
     font-size: 17px;
+}
+
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 /* end About  */
 

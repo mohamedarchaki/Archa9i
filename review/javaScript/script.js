@@ -145,6 +145,54 @@ function getInStorge(){
 bodyDark.classList.add(testBody);
 }
 var i
+//==========JSON REVIEW=================
+
+  let reviews = [
+    { 'id': 1, 'name': 'John Doe', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 4 },
+    { 'id': 2, 'name': 'Jane Smith', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 3 },
+    { 'id': 4, 'name': 'Bob Brown', 'email': '', 'titel': '', 'freedback': 'sssss ss s ssss s sss', 'rvPnt': 2 },
+  ];
+  function getTasksFromStorage(){
+    let retrivedTasks = JSON.parse(localStorage.getItem("reviews"))
+    reviews  = retrivedTasks ?? [
+      { 'id': 1, 'name': 'John Doe', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 4 },
+      { 'id': 2, 'name': 'Jane Smith', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 3 },
+      { 'id': 4, 'name': 'Bob Brown', 'email': '', 'titel': '', 'freedback': 'sssss ss s ssss s sss', 'rvPnt': 2 },
+    ];
+}
+getTasksFromStorage()
+  function afficherReview() {
+    const boxPpl = document.querySelector('.box_ppl');
+    if (!boxPpl) return;
+
+    reviews.forEach(review => {
+      boxPpl.insertAdjacentHTML('beforeend', `
+        <div class="box" id="box${review.id}">
+          <h1>${review.name}</h1>
+          
+          <img src="img/avatar-05.png" alt="">
+          <p>${review.freedback}</p>
+          
+          <div class="stars">
+            ${[...Array(5)].map((_, i) => `<i class="fa-solid fa-star ${i < review.rvPnt ? 'gold' : ''}"></i>`).join('')}
+          </div>
+        </div>
+      `);
+    });
+
+    document.querySelectorAll('.gold').forEach(star => {
+      star.style.color = 'gold';
+    });
+  }
+
+  afficherReview();
+
+  function addToStorage(){
+    let reviewsString= JSON.stringify(reviews)
+    localStorage.setItem("reviews",reviewsString)
+}
+addToStorage()
+
 function changeColor(starNum) {
   var stars = document.querySelectorAll('.sta');
   for (i = 0; i < stars.length; i++) {
@@ -163,6 +211,7 @@ btnRv.onclick=function (){
   box_ppl.innerHTML+=`
   <div class="box">
                   <h1>${document.getElementById("contact-name").value}</h1>
+                  <img src="img/avatar-05.png" alt="">
                   <p>${document.getElementById("contact-message").value}</p>
                   <div class="stars">
                     <i class="fa-solid fa-star sta2"></i>
@@ -171,7 +220,6 @@ btnRv.onclick=function (){
                     <i class="fa-solid fa-star sta2"></i>
                     <i class="fa-solid fa-star sta2"></i>
                   </div>  
-                  <img src="img/avatar-05.png" alt="">
               </div>`;
   var stars2 = document.querySelectorAll('.sta2');
   for (i = 0; i < stars2.length; i++) {
@@ -181,38 +229,43 @@ btnRv.onclick=function (){
       stars2[i].style.color = 'var(--color-p)'; // الحفاظ على النجوم الباقية بلونها الافتراضي
     }
   }
+  rvi = 
+  { 'id': 6, 'name': `${document.getElementById("contact-name").value}`, 'email': '', 'titel': '', 'freedback': `${document.getElementById("contact-message").value}`, 'rvPnt': starNum }
+reviews.push(rvi)
+addToStorage()
 }
+
 }
 
-//==========JSON REVIEW=================
 
-  const reviews = [
-    { 'id': 1, 'name': 'John Doe', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 4 },
-    { 'id': 2, 'name': 'Jane Smith', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 3 },
-    { 'id': 3, 'name': 'Alice Johnson', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 5 },
-    { 'id': 4, 'name': 'Bob Brown', 'email': '', 'titel': '', 'freedback': '', 'rvPnt': 2 }
-  ];
 
-  function afficherReview() {
-    const boxPpl = document.querySelector('.box_ppl');
-    if (!boxPpl) return;
 
-    reviews.forEach(review => {
-      boxPpl.insertAdjacentHTML('beforeend', `
-        <div class="box">
-          <h1>${review.name}</h1>
-          <p>${review.freedback}</p>
-          <div class="stars">
-            ${[...Array(5)].map((_, i) => `<i class="fa-solid fa-star ${i < review.rvPnt ? 'gold' : ''}"></i>`).join('')}
-          </div>
-          <img src="img/avatar-05.png" alt="">
-        </div>
-      `);
-    });
 
-    document.querySelectorAll('.gold').forEach(star => {
-      star.style.color = 'gold';
-    });
+
+document.addEventListener("DOMContentLoaded", () => {
+  let currentBoxIndex = 0;
+  const boxes = document.querySelectorAll('.box_ppl .box');
+  const totalBoxes = boxes.length;
+
+  function showBox(index) {
+      boxes.forEach((box, i) => {
+          box.classList.remove('active');
+          if (i === index) {
+              box.classList.add('active');
+          }
+      });
   }
 
-  afficherReview();
+  document.getElementById('leftBtn').addEventListener('click', () => {
+      currentBoxIndex = (currentBoxIndex === 0) ? totalBoxes - 1 : currentBoxIndex - 1;
+      showBox(currentBoxIndex);
+  });
+
+  document.getElementById('rightBtn').addEventListener('click', () => {
+      currentBoxIndex = (currentBoxIndex === totalBoxes - 1) ? 0 : currentBoxIndex + 1;
+      showBox(currentBoxIndex);
+  });
+
+  // Show the first box initially
+  showBox(currentBoxIndex);
+});
